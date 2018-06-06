@@ -11,10 +11,12 @@ The drone will stream to it if your mobile device DJI app is running, and you se
 The next step to simply test it:
 
 - On OSX, I had to use an old version of VLC to see rtmp streams correctly.  I installed VLC 2.2.4, and was able to read from the rtmp url.
-- Once VLC works, you can use ffmpeg command-lines to convert these streams into mp4 files.
+- Once VLC works, you know that RTMP streaming from the drone works.  Next, you can use ffmpeg command-lines to convert these streams into mp4 files.
 
 For example, to extract the currently streaming 1MB off of a stream, you can run this:
 
 ```
 ffmpeg -i rtmp://mydjidrone.rfielding.com:1935/live/a -fs 1000000 flight.mp4
 ```
+
+There are more complicated commands you can run with ffmpeg to segment the video.
